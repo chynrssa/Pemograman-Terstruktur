@@ -7,6 +7,7 @@ struct Mahasiswa{
 
 int main(){
 	Mahasiswa Mhs;
+
 	cin >> Mhs.nama;
 	cin >> Mhs.npm;
 	
