@@ -21,9 +21,9 @@ double pembagian(int a, int b){
 
 int main(){
     double x,y;
-    cout << "Masukkan angka pertama : ";
+    cout << "Silahkan masukkan angka pertama : ";
     cin >> x;
-    cout << "Masukkan angka kdeua : ";
+    cout << "Silahkan masukkan angka kdeua : ";
     cin >> y;
 
     cout << "=======================================" << endl;
