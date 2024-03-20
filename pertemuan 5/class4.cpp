@@ -5,8 +5,8 @@ class Mahasiswa{
 	private:
 		string nama;
 	public:
-     void setNama(string nama){
-		this-> nama = nama;
+     	void setNama(string nama) {
+			this-> nama = nama;
 		}
 };
 
