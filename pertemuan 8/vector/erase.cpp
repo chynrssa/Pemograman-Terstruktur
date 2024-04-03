@@ -4,6 +4,6 @@ using namespace std;
 
 int main(){
     vector<char>huruf = {'j','i','h','a','n'};
-        cout << huruf.empty();
+    huruf.erase(huruf.begin(),huruf.begin()+3);
     
 }

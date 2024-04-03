@@ -5,5 +5,5 @@ using namespace std;
 int main(){
     vector<char>huruf = {'j','i','h','a','n'};
     huruf.back()= 'h';
-    cout << huruf.back();
+        cout << huruf.back();
 }
