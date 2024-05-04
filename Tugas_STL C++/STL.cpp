@@ -15,25 +15,26 @@ class PerhitunganUmur{
        public:
                PerhitunganUmur(T* tanggal, T* bulan, T* tahun) : tanggal(tanggal), bulan(bulan), tahun(tahun){
                } 
-               T* getTanggal() const{
+                T* getTanggal() const{
                        return tanggal;
-              }
-              void setTanggal(T* tanggal){
+                }
+                void setTanggal(T* tanggal){
                       this ->tanggal = tanggal;
-              }
-              T* getBulan() const{
+                }
+                T* getBulan() const{
                       return bulan;
-             }
-             void setBulan(T* bulan){
+                }
+                void setBulan(T* bulan){
                       this -> bulan = bulan;
-             }
-             T* getTahun() const{
+                }
+                T* getTahun() const{
                       return tahun;
-             }
-             void setTahun(T* tahun){
+                }
+                void setTahun(T* tahun){
                       this -> tahun = tahun;
-             }
-             void HitungUmur() const{
+                }
+                
+            void HitungUmur() const{
                       int tahun_lahir = *tahun;
                       int bulan_lahir = *bulan;
                       int tanggal_lahir = *tanggal;
@@ -55,20 +56,20 @@ class PerhitunganUmur{
                      cout << "Umur Anda adalah " << umur_tahun << " tahun, " << umur_bulan << " bulan, dan " << umur_tanggal << " hari" << endl;
              } 
 
-             void HitungHari(int bulan, int tahun) const {
-                     int jumlah_hari;
+            void HitungHari(int bulan, int tahun) const {
+                    int jumlah_hari;
 
-                     if(bulan == 2){
+                    if(bulan == 2){
                          if((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0){
                              jumlah_hari = 29;
                          } else {
                              jumlah_hari = 28;
                          }
-                     } else if(bulan == 4 || bulan == 6 || bulan == 9 || bulan == 11){
+                    } else if(bulan == 4 || bulan == 6 || bulan == 9 || bulan == 11){
                          jumlah_hari = 30;
-                     } else {
+                    } else {
                            jumlah_hari = 31;
-                     }
+                    }
                      cout << "Jumlah hari dalam bulan " << bulan << " tahun " << tahun << " adalah " << jumlah_hari << " hari." << endl;
              }
 
@@ -78,9 +79,9 @@ class PerhitunganUmur{
                         if (tahun_kabisat % 100 == 0){
                             if (tahun_kabisat % 400 == 0){
                                 return true;
-                             } else {
+                            } else {
                                 return false;
-                             }
+                            }
                         } else {
                              return true;
                         }
@@ -92,23 +93,23 @@ class PerhitunganUmur{
 
 int main(){
       int tanggal, bulan, tahun;
-      cout << "Masukkan tanggal, bulan, dan tahun lahir anda \n";
-      cin >> tanggal >> bulan >> tahun;
+        cout << "Masukkan tanggal, bulan, dan tahun lahir anda \n";
+        cin >> tanggal >> bulan >> tahun;
 
       PerhitunganUmur <int> umur (&tanggal, &bulan, &tahun);
       umur.HitungUmur();
 
       int bulan_input, tahun_input;
-      cout << "\nMasukkan bulan dan tahun untuk menghitung jumlah hari dalam bulan dan tahun tertentu : ";
-      cin >>bulan_input >> tahun_input;
+        cout << "\nMasukkan bulan dan tahun untuk menghitung jumlah hari dalam bulan dan tahun tertentu : ";
+        cin >>bulan_input >> tahun_input;
 
       umur.HitungHari(bulan_input, tahun_input);
 
       if(umur.HitungKabisat()){
-      cout << tahun_input << " adalah tahun kabisat" << endl;
+        cout << tahun_input << " adalah tahun kabisat" << endl;
       }
       else {
-           cout << tahun_input << " Bukan tahun kabisat " << endl;
+        cout << tahun_input << " Bukan tahun kabisat " << endl;
       }
  return 0;
 }
